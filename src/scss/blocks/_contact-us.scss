@@ -1,0 +1,91 @@
+.contact-us {
+    padding: 120px 15% 0;
+    position: relative;
+
+    &__content {
+        border: 2px solid $black;
+        padding: 50px 200px 25px;
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 75% 0, 75% 3%, 25% 3%, 25% 0);
+        max-width: 100%;
+
+        @include media('<=1024px') {
+            padding: 50px 80px 25px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 80% 0, 80% 3%, 20% 3%, 20% 0);
+        }
+
+        @include media('<=768px') {
+            padding: 50px 40px 25px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 85% 0, 85% 3%, 15% 3%, 15% 0);
+        }
+
+        @include media('<=320px') {
+            padding: 50px 10px 25px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 90% 0, 90% 3%, 10% 3%, 10% 0);
+        }
+    }
+
+    &__title {
+        position: absolute;
+        top: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        text-transform: uppercase;
+
+        @include media('<=768px') {
+            font-size: $h3;
+            top: 100px;
+        }
+
+        @include media('<=320px') {
+            font-size: 16px;
+            top: 100px;
+        }
+    }
+
+    &__text {
+        max-width: 510px;
+        line-height: 25px;
+
+        @include media('<=768px') {
+            max-width: 400px;
+        }
+
+        @include media('<=520px') {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        @include media('<=320px') {
+            max-width: 200px;
+        }
+    }
+
+    &__btn-holder {
+        padding: 35px 0 25px;
+    }
+
+    &__btn {
+        width: 400px;
+        height: 55px;
+        font-size: $text16;
+        border-radius: 0;
+        background-color: $black;
+        color: $white;
+        text-transform: uppercase;
+        cursor: pointer;
+
+        @include media('<=768px') {
+            width: 350px;
+            max-width: 100%;
+        }
+
+        @include media('<=520px') {
+            width: 250px;
+        }
+        
+        @include media('<=320px') {
+            width: 200px;
+        }
+    }
+}

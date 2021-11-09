@@ -1,0 +1,14 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.our-team {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

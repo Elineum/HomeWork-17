@@ -1,0 +1,45 @@
+.tiles {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        justify-content: center;
+    }
+
+    &__link {
+        display: block;
+    }
+
+    &__item {
+        max-width: 29%;
+        padding: 2px;
+        position: relative;
+
+        &_big {
+            max-width: 42%;
+        }
+    }
+
+    span {
+        position: absolute;
+        bottom: 10%;
+        left: 7%;
+        text-transform: uppercase;
+        color: $white;
+        font-size: 30px;
+        letter-spacing: 1.3px;
+
+        @include media('<=768px') {
+            font-size: 20px;
+        }
+
+        @include media('<=520px') {
+            font-size: 13px;
+        }
+
+        @include media('<=320px') {
+            font-size: 10px;
+        }
+    }
+}

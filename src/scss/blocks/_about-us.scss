@@ -1,0 +1,55 @@
+.about-us {
+    padding: 160px 15%;
+    position: relative;
+
+    &__title {
+        position: absolute;
+        top: 130px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: $h2;
+
+        @include media('<=768px') {
+            font-size: $h3;
+            top: 140px;
+        }
+
+        @include media('<=320px') {
+            font-size: 16px;
+            top: 145px;
+        }
+    }
+
+    &__content {
+        border: 2px solid $black;
+        padding: 75px 175px 25px;
+        clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 75% 0, 75% 3%, 25% 3%, 25% 0);
+
+        @include media('<=1024px') {
+            padding: 75px 80px 25px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 80% 0, 80% 3%, 20% 3%, 20% 0);
+        }
+
+        @include media('<=768px') {
+            padding: 75px 40px 25px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 85% 0, 85% 3%, 15% 3%, 15% 0);
+        }
+
+        @include media('<=320px') {
+            padding: 75px 10px 25px;
+            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0, 90% 0, 90% 3%, 10% 3%, 10% 0);
+        }
+    }
+
+    &__text {
+        max-width: 500px;
+        line-height: 24px;
+        font-size: $text16;
+
+        &_small {
+            padding-top: 25px;
+            max-width: 386px;
+            margin: 0 auto;
+        }
+    }
+}
